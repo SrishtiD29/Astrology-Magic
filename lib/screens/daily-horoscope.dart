@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:astro_world/screens/home.dart';
 import 'package:astro_world/screens/horoscopes.dart';
-import 'package:http/http.dart' as http;
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
@@ -66,17 +66,11 @@ class _daily_horoscopeState extends State<daily_horoscope> {
         leading: GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const home_screen()));
+                MaterialPageRoute(builder: (context) => const horoscopes()));
           },
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const horoscopes()));
-            },
-            child: const Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-            ),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
           ),
         ),
       ),

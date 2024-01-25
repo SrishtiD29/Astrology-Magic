@@ -2,7 +2,10 @@
 
 import 'package:astro_world/screens/edit-pofile-screen.dart';
 import 'package:astro_world/screens/home.dart';
+import 'package:astro_world/screens/kundali.dart';
+import 'package:astro_world/screens/kundali_1.dart';
 import 'package:astro_world/screens/login-screen.dart';
+import 'package:astro_world/screens/panchang-screen.dart';
 import 'package:astro_world/screens/settings.dart';
 import 'package:astro_world/screens/sign-up-screen.dart';
 import 'package:astro_world/screens/splash-screen.dart';
@@ -35,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const splash_screen(),
+      home: home_screen(),
     );
   }
 }

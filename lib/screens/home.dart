@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:astro_world/screens/daily-horoscope.dart';
 import 'package:astro_world/screens/horoscopes.dart';
+import 'package:astro_world/screens/kundali.dart';
 import 'package:astro_world/screens/panchang-screen.dart';
 import 'package:astro_world/screens/settings.dart';
 import 'package:astro_world/services/panchang-api.dart';
@@ -397,22 +398,31 @@ class _home_screenState extends State<home_screen> {
                               child: Image.asset(
                                   'assets/icons/horoscope-icon.png')),
                         ),
-                        Container(
-                          height: 90,
-                          width: 90,
-                          decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomLeft,
-                                end: Alignment.topRight,
-                                colors: [
-                                  Color(0xFFFFCB43),
-                                  Color(0xFFFF6425),
-                                  Color(0xFFFF0016),
-                                ],
-                                stops: [0.0, 0.37, 1.0],
-                              ),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Image.asset('assets/icons/kundali-icon.png'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const kundali_screen()));
+                          },
+                          child: Container(
+                            height: 90,
+                            width: 90,
+                            decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  begin: Alignment.bottomLeft,
+                                  end: Alignment.topRight,
+                                  colors: [
+                                    Color(0xFFFFCB43),
+                                    Color(0xFFFF6425),
+                                    Color(0xFFFF0016),
+                                  ],
+                                  stops: [0.0, 0.37, 1.0],
+                                ),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Image.asset('assets/icons/kundali-icon.png'),
+                          ),
                         )
                       ],
                     ),

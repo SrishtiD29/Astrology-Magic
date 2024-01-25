@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, file_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/input_borders/gradient_outline_input_border.dart';
@@ -34,7 +36,7 @@ class edit_profileState extends State<edit_profile> {
             Stack(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height - 590,
+                  height: MediaQuery.of(context).size.height * 0.215,
                   margin: EdgeInsets.only(top: 35),
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
